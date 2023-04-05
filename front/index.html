@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <script src="https://kit.fontawesome.com/9b62b45484.js" crossorigin="anonymous"></script> 
+
+  <title>Password generator</title>
+</head>
+<body>
+
+<div id="bloc">
+  <div id="title">Générateur de Mot de Passe</div>
+
+  <div id="pageGestion">
+    <a  href="gestion.html" id="gestion">Mon Gestionnaire</a>
+  </div>
+  <div id="screenCopy">
+    <div id='screen'>P4$5W0rD!</div>
+    <div id="buttonCS">
+      <button id="copy" onclick="copy()"><p id="copied">COPIÉ</p><img src="../assets/images/icon-copy.svg"></button>
+      <button id="save"><img src="../assets/images/dl-save.svg"></button>
+    </div>
+  </div>
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div id="titleClose">  
+        <h2 id="title2">Nouveau mot de passe</h2>
+        <span class="close">&times;</span>
+      </div>
+        <form name="saveForm" id="form">
+          <input type="text" name="identifiant" id="identifiant" maxlength="16" placeholder="Identifiant correspondant"/>
+          <label>
+            <input type="password" name="pass" id="pass" readonly placeholder="Veuillez générer un mot de passe"/>
+            <div class="password-icon">
+              <i class="fa-solid fa-eye"></i>
+              <i class="fa-sharp fa-solid fa-eye-slash"></i>
+            </div>
+          </label>
+          <input type="text" name="siteAppli" id="siteAppli" maxlength="10"placeholder="Appli ou Site"/>
+          <input type="submit" name="register" value="Sauvegarder"/></form>
+      </form>
+    </div>
+  </div>
+  <div id="bloc2">
+    <div class="slideContainer">
+      <div id="valueChanged">
+        <p id="numberCarac">Nombres de Caractères</p>
+      </div>
+      <input type="range" min="8" max="16" value="12" class="slider" id="myRange" onchange="sliderChange(this.value)" >
+    </div>
+
+    <div id="checkbox">
+      <div id="checkbox1">
+        <input type="checkbox" id="upper" name="upper" ></input><p>Inclure des Lettres Majuscules</p>
+      </div>
+      <div id="checkbox2">
+        <input type="checkbox" id="lower" name="lower" ></input><p>Inclure des Lettres Minuscules</p>
+      </div>
+      <div id="checkbox3">
+        <input type="checkbox" id="number" name="number" ></input><p>Inclure des Nombres</p>
+      </div>
+      <div id="checkbox4">
+        <input type="checkbox" id="symbol" name="symbol" ></input><p>Inclure des Symboles</p>
+      </div>
+    </div>   
+      <div id="strPassword"><p id="protect">PROTECTION</p></div>
+
+      <button id="generate" onclick='createPassword()'>Générer  
+        <img src="../assets/images/icon-arrow-right.svg">
+      </button>
+  </div>
+</div>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+

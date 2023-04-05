@@ -1,0 +1,460 @@
+@font-face {
+    font-family: 'Jet Brains';
+    src: url('../assets/fonts/static/JetBrainsMono-Bold.ttf');
+}
+
+* {
+    font-family: 'Jet Brains', sans-serif;
+    background-color: var(--background-color);
+}
+
+:root {
+    --background-color: #18171F;
+    --police-color: #E6E5EA;
+    --bloc-color: #24232C;
+    --slide-color: #A4FFAF;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+p {
+    background-color: var(--bloc-color);
+}
+
+#bloc {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    color: var(--police-color);
+    row-gap: 20px;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    margin: 15% 0% 0% 0%;
+}
+
+#screen {
+    display: flex;
+    padding: 5% 0% 0% 5%;
+    width: 70%;
+    height: 40px;
+    z-index: 2;
+    background-color: var(--bloc-color);
+}
+
+/* mot de passe + bouton copier */
+
+#buttonCS {
+    display: flex;
+    width: 30%;
+    background-color: var(--bloc-color);
+}
+
+#screenCopy {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bloc-color);
+}
+
+#copy {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    margin-right: 12%;
+    background-color: var(--bloc-color);
+    color: var(--slide-color);
+}
+
+#copied {
+    display: flex;
+    align-items: center;
+    margin-right: 20%;
+    color: var(--bloc-color);
+    background-color: var(--bloc-color);
+}
+
+#copy>img {
+    background-color: var(--bloc-color);
+}
+
+/* bouton save */ 
+
+#save {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    background-color: var(--bloc-color);
+}
+
+#save>img {
+    width: 23px;
+    height: 25px;
+    background: none;
+    filter: invert(91%) sepia(7%) saturate(1968%) hue-rotate(66deg) brightness(100%) contrast(104%);
+}
+
+/* bouton gestionnaire */
+
+#pageGestion {
+    display: flex;
+    align-content: center;
+    position: relative;
+
+}
+
+#gestion {
+    display: flex;
+    position: relative;
+    top: 50px;
+    z-index: 1;
+    left: 160px;
+    width: 160px;
+    height: 20px;
+    border: none;
+    background-color: var(--slide-color);
+    color: var(--bloc-color);
+    padding: 2%;
+    transition: ease-in 0.3s 
+}
+
+#gestion:hover {
+    top: 20px;
+}
+
+a {
+    width: 160px;
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--bloc-color);
+    text-decoration: none;
+    width: 160px;
+}
+
+/* bloc 2 */
+
+#bloc2 {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    background-color: var(--bloc-color);
+}
+
+/* slide container */
+
+.slideContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--bloc-color);
+}
+
+#valueChanged {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--bloc-color);
+    color: var(--slide-color);
+}
+
+#numberCarac {
+    color: var(--police-color);
+}
+
+/* slider personnalisation */
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    /* overflow-y: hidden; */
+    width: 100%;
+    height: 10px;
+    background: var(--background-color);
+    border-radius: 10px;
+    outline: none;
+    opacity: 0.9;
+}
+  
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    border-radius: 15px;
+    background: var(--police-color);
+    cursor: pointer;
+    /* box-shadow: -280px 0 0 272px var(--slide-color); */
+}
+
+.slider::-moz-range-thumb {
+    width: 17px;
+    height: 17px;
+    background: var(--police-color);
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    background: var(--background-color);
+    border: solid 1px var(--slide-color)
+}
+
+/* checkbox */
+
+#checkbox {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bloc-color);
+}
+
+#upper, #lower, #number, #symbol {
+    position: relative;
+    top: 15px;
+}
+
+#checkbox1, #checkbox2, #checkbox3, #checkbox4 {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--bloc-color);
+}
+
+#checkbox1>p, #checkbox2>p, #checkbox3>p, #checkbox4>p {
+    padding-left: 1%;
+}
+
+/* personnalisation checkbox */
+
+input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    height: 15px;
+    width: 15px;
+    background: none;
+    border: 1px solid var(--police-color);
+}
+
+input[type="checkbox"]:checked {
+    background: var(--slide-color);
+    position: relative;
+}
+
+input[type="checkbox"]:checked::before {
+    font-family: 'Jet Brains', sans-serif;
+    content: '✔';
+    color: var(--bloc-color);
+    font-size: 17px;
+    position: relative;
+    top: -5px;
+}
+
+input[type="checkbox"]:hover {
+    border: 1px solid var(--slide-color);
+}
+
+/* str + button */
+
+#strPassword {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5%;
+}
+
+#strPassword>p {
+    background-color: var(--background-color);
+    padding-left: 5%;
+    font-size: 25px;
+}
+
+/* generate button */
+
+#generate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-size: 22px;
+    width: 100%;
+    height: 70px;
+    background-color: var(--slide-color);
+    color: var(--bloc-color);
+}
+
+#generate>img {
+    background-color: var(--slide-color);
+    padding: 2px 0px 0px 8px;
+}
+
+/* protection */
+
+#protect {
+    color: var(--bloc-color);
+}
+
+#percentStr {
+    margin-left: 10px;
+    color: var(--police-color);
+}
+
+#bar {
+    /* html with js "div #bar "*/
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+}
+#first, #second, #third, #fourth {
+    width: 10px;
+    height: 30px;
+    color: var(--background-color);
+    border: 1px solid var(--police-color);
+    margin-right: 8px;
+}
+
+
+/* modal personalisation */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0,0,0,0.8);
+    }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: var(--bloc-color);
+    margin: 15% auto; /* 15% from the top and centered */
+    border: none;
+    width: 400px; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: var(--police-color);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding-right: 5%;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: var(--slide-color);
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.6s;
+  }
+
+  #titleClose {
+    display: flex;
+    flex-direction: row;
+    margin-bottom:4%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #title2 {
+    font-size: 22px;
+    margin-left: 5%;
+  }
+
+  /* form css */
+
+  #myModal {
+    z-index: 3;
+  }
+
+  #form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: var(--bloc-color);
+  }
+
+  #form>input {
+    border: 1px solid var(--slide-color);
+    width: 90%;
+    height: 50px;
+    padding-left: 2%;
+    color: var(--police-color);
+    margin: 0% 2% 5% 2%;
+  }
+
+  #form>input:focus {
+    outline: none;
+  }
+
+  #form>input[type=submit]{
+    color: var(--police-color);
+    border: none;
+    height: 60px;
+    width: 30%;
+    align-items: center;
+  }
+
+  #form>input[type=submit]:hover {
+    color: var(--slide-color);
+    border: 1px solid var(--slide-color);
+    transition: 0.4s;
+  }
+
+  /* eye */
+
+.password-icon {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    color: var(--police-color);
+    transition: all 0.2s;
+  }
+
+.password-icon:hover {
+    cursor: pointer;
+    color: var(--slide-color);
+  }
+
+.password-icon .fa-eye-slash {
+    display: none;
+  }
+
+  label {
+    position: relative;
+    background-color: var(--bloc-color);
+    margin: 0% 5% 5% 2%;
+    width: 90%;
+    height: 50px;
+  }
+
+  label input {
+    border: 1px solid var(--slide-color);
+    width: 100%;
+    height: 50px;
+    padding-left: 2%;
+    color: var(--police-color);
+    outline: none;
+  }
